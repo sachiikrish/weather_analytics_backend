@@ -5,7 +5,9 @@ const axios = require("axios");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://weather-analytics-frontend.vercel.app",
+}));
 app.use(express.json());
 
 // ─── Axios instance for ThingSpeak ───────────────────────────────────────────
